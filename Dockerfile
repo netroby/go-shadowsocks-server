@@ -6,5 +6,6 @@ RUN apk update ; \
         mv /opt/go/bin/shadowsocks-server /bin/shadowsocks-server;\
         apk del openssl ca-certificates libssh2 curl expat pcre git go;\
         rm -rf /opt/go ;\
-        rm -rf /usr/lib/go;\
+        rm -rf /usr/lib/go;
+
 ENTRYPOINT ["/bin/shadowsocks-server", "-c", "/etc/config.json"]
