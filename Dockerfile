@@ -8,4 +8,3 @@ RUN apk update ; \
         rm -rf /opt/go ;\
         rm -rf /usr/lib/go;
 
-ENTRYPOINT ["/bin/shadowsocks-server", "-c", "/etc/config.json"]
