@@ -5,6 +5,5 @@ RUN apk update ; \
         export GOPATH=/go; \
         go get github.com/shadowsocks/go-shadowsocks2; \
         rm -rf /usr/local; 
-RUN export EKEY=`echo $KEY | base64 `
-CMD /go/bin/go-shadowsocks2 -s :8443 -cipher aes-128-ctr  -key $EKEY -verbose
+CMD EKEY=`echo $KEY | base64 ` && /go/bin/go-shadowsocks2 -s :8443 -cipher aes-128-ctr  -key $EKEY -verbose
 
