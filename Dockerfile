@@ -6,5 +6,5 @@ RUN apk update ; \
         export GOPATH=/go; \
         go get github.com/shadowsocks/go-shadowsocks2; \
         rm -rf /usr/local; 
-CMD /entrypoint.sh
+CMD /bin/sh /entrypoint.sh
 
