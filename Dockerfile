@@ -1,6 +1,5 @@
 FROM golang:rc-alpine
 ENV GOPATH /go
-ADD entrypoint.sh /entrypoint.sh
 RUN apk update ; \
         apk add git;\
         export GOPATH=/go; \
